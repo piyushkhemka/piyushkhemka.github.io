@@ -1,0 +1,38 @@
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: pygments
+markdown: kramdown
+disqus: piy9
+# google_analytics: dbyll
+title: Piyush's site
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: Piyush
+
+description: Piyush's site
+author:
+  name: Piyush Khemka
+  email: piyushkhemka123@gmail.com
+  github: piyushkhemka
+#  twitter: dbtek
+ # pinterest: asd123
+  linkedin: khemkapiyush
+  bio: TODO : Add bio in config file
+ # email_md5: 726351295ec82e145928582f595aa3aa
+
+#rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
+
+BASE_PATH:
+
+gems:
+  - jekyll-paginate
