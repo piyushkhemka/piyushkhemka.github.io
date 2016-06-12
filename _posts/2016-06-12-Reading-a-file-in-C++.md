@@ -9,6 +9,8 @@ comments: true
 
 Read a file line by line in C++
 
+{% highlight yaml %}
+
 #include <fstream>
 #include <string>
 
@@ -22,3 +24,5 @@ int main()
         // Process str
     }
 }
+
+{% endhighlight %}
