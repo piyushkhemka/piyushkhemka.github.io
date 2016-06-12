@@ -12,6 +12,11 @@ body{
 	color: #fff;
 }
 
+.img-circle {
+	height: 120px;
+	width: 150px;
+}
+
 .sidebar-header {
 	text-align: center;
 	margin-bottom: 10px;
