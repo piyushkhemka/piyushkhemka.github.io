@@ -19,10 +19,10 @@ A = 65, Z = 90
 
 
 {% highlight yaml %}
-	char ch = 'z';
-	int num = (int)ch-'a'; // 122-97 =25
-	char y = char(num)+'a'; // 25+97 = 122
-	cout << y;
+char ch = 'z';
+int num = (int)ch-'a'; // 122-97 =25
+char y = char(num)+'a'; // 25+97 = 122
+cout << y;
 
 {% endhighlight %}
 

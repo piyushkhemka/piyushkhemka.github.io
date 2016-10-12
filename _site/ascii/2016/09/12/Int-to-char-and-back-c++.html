@@ -2,9 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Sample 2</title>
-	
-	<meta name="description" content="Sample placeholder post.">
+	<title>Ascii conversion from char to int & back in C++</title>
 	
 	<meta name="author" content="Piyush Khemka">
 
@@ -88,7 +86,7 @@
 		<!-- sidebar.html -->
 <header class="sidebar-header" role="banner">
 	<a href="/">
-		<img src="http://www.gravatar.com/avatar/?s=150" class="img-circle" />
+		<img src="/assets/img/Piyush.jpg" class="img-circle" />
 	</a>
 	<h3 class="title">
         <a href="/">Piyush's site</a>
@@ -97,7 +95,7 @@
 
 
 <div id="bio" class="text-center">
-	Your stylish, minimalist theme!
+	Add bio in config file (TODO)
 </div>
 
 
@@ -141,7 +139,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Sample 2 </h1>
+  <h1>Ascii conversion from char to int & back in C++ </h1>
 </div>
 	
 <article>
@@ -149,15 +147,27 @@
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   
-	   November 
-	   14th,
+	   September 
+	   12th,
 	   
-	   2013
+	   2016
 	 </span>
 	  <div class="article_body">
-	  <p>Lorem ipsum dolor sit amet,  consectetur adipisicing elit,  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  <p>Ascii values</p>
 
-<p>Lorem ipsum dolor sit amet,  consectetur adipisicing elit,  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">a = 97, z = 122</span>
+<span class="s">A = 65, Z = 90</span>
+<span class="s">0 = 48</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">char ch = 'z';</span>
+<span class="s">int num = (int)ch-'a'; // 122-97 =25</span>
+<span class="s">char y = char(num)+'a'; // 25+97 = 122</span>
+<span class="s">cout &lt;&lt; y;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">char one = '1'</span>
+<span class="s">int ans = int(one) - '0' // 49-48 = 1</span>
+<span class="s">cout &lt;&lt; ans; //get one</span></code></pre></figure>
+
 
 	  </div>
 
@@ -167,18 +177,8 @@
 		  
 		  
 			 
-				<li><a href="/categories.html#general-ref">
-					general <span>(4)</span>
-					,
-				</a></li>
-			 
-				<li><a href="/categories.html#demo-ref">
-					demo <span>(4)</span>
-					,
-				</a></li>
-			 
-				<li><a href="/categories.html#sample-ref">
-					sample <span>(1)</span>
+				<li><a href="/categories.html#ascii-ref">
+					ascii <span>(1)</span>
 					
 				</a></li>
 			
@@ -193,29 +193,15 @@
 		  
 			 
 				<li>
-					<a href="/tags.html#demo-ref">
-					demo <span>(4)</span>
+					<a href="/tags.html#C++-ref">
+					C++ <span>(3)</span>
 					,
 					</a>
 				</li>
 			 
 				<li>
-					<a href="/tags.html#dbyll-ref">
-					dbyll <span>(4)</span>
-					,
-					</a>
-				</li>
-			 
-				<li>
-					<a href="/tags.html#dbtek-ref">
-					dbtek <span>(4)</span>
-					,
-					</a>
-				</li>
-			 
-				<li>
-					<a href="/tags.html#sample2-ref">
-					sample2 <span>(1)</span>
+					<a href="/tags.html#ascii-ref">
+					ascii <span>(1)</span>
 					
 					</a>
 				</li>
@@ -230,7 +216,7 @@
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Sample 2"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Ascii conversion from char to int & back in C++"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -250,7 +236,7 @@
       <section class="col-sm-6 author">
         <img src="http://www.gravatar.com/avatar/" class="img-rounded author-image" />
         <h4 class="section-title author-name">Piyush Khemka</h4>
-        <p class="author-bio">Your stylish, minimalist theme!</p>
+        <p class="author-bio">Add bio in config file (TODO)</p>
       </section>
     </div>
 
@@ -258,10 +244,10 @@
 
 		<ul class="pager">
 		  
-		  <li class="previous disabled"><a>&larr; Previous</a></li>
+		  <li class="previous"><a href="/general/2016/06/12/Reading-a-file-in-C++.html" title="Reading a file line by line in C++">&larr; Previous</a></li>
 		  
 		  
-		  <li class="next"><a href="/general/demo/2013/11/14/sample.html" title="Sample">Next &rarr;</a></li>
+		  <li class="next"><a href="/code/2016/10/10/priority-queues-in-c++.html" title="Priority Queues in C++">Next &rarr;</a></li>
 		  
 		</ul>
 
@@ -273,6 +259,23 @@
 	</div>
 </article>
 <div class="clearfix"></div>
+
+
+
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'piy9';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 
 

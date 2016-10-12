@@ -28,6 +28,7 @@ int main()
 {% endhighlight %}
 
 {% highlight yaml %}
+
 ifstream file("/Users/piyushkhemka/Downloads/MCC/fmn.txt", ios::in);
 
    while(getline(file, line)) {
@@ -48,7 +49,7 @@ ifstream file("/Users/piyushkhemka/Downloads/MCC/fmn.txt", ios::in);
        v.push_back(stoi(temp));
        int sum = 0; // Process each line here
        for(auto it = v.begin();it!=v.end();it++) {
-           sum+=*it;
+           sum+= *it;
        }
        cout << sum;
        cout << endl << endl<< endl << endl<< endl << endl;

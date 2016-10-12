@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Configuration</title>
+	<title>Reading a file line by line in C++</title>
 	
 	<meta name="author" content="Piyush Khemka">
 
@@ -86,7 +86,7 @@
 		<!-- sidebar.html -->
 <header class="sidebar-header" role="banner">
 	<a href="/">
-		<img src="http://www.gravatar.com/avatar/?s=150" class="img-circle" />
+		<img src="/assets/img/Piyush.jpg" class="img-circle" />
 	</a>
 	<h3 class="title">
         <a href="/">Piyush's site</a>
@@ -95,7 +95,7 @@
 
 
 <div id="bio" class="text-center">
-	Your stylish, minimalist theme!
+	Add bio in config file (TODO)
 </div>
 
 
@@ -139,7 +139,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Configuration </h1>
+  <h1>Reading a file line by line in C++ </h1>
 </div>
 	
 <article>
@@ -147,24 +147,54 @@
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   
-	   November 
-	   15th,
+	   June 
+	   12th,
 	   
-	   2013
+	   2016
 	 </span>
 	  <div class="article_body">
-	  <p>In your config file change these settings</p>
+	  <p>Read a file line by line in C++</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">dbyll</span>
-<span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>  
-  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Piyush Khemka</span>  
-  <span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">piyushkhemka123@gmail.com</span>  
-  <span class="l-Scalar-Plain">github</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">piyushkhemka</span>  
-  <span class="l-Scalar-Plain">twitter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">piy9</span>  
-  <span class="l-Scalar-Plain">linkedin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">khemkapiyush</span>  
-  <span class="l-Scalar-Plain">resume</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">asd123</span>  
-  <span class="l-Scalar-Plain">bio</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Your stylish,  minimalist theme!</span>  
-  <span class="l-Scalar-Plain">email_md5</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">piyushkhemka123@gmail.com</span>  </code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#include &lt;fstream&gt;</span>
+<span class="c1">#include &lt;string&gt;</span>
+
+
+<span class="s">int main()</span>
+<span class="pi">{</span>
+    <span class="nv">std</span><span class="pi">::</span><span class="nv">ifstream file("Read.txt");</span>
+    <span class="nv">std</span><span class="pi">::</span><span class="nv">string str;</span>
+    <span class="nv">while (std</span><span class="pi">::</span><span class="nv">getline(file</span><span class="pi">,</span> <span class="nv">str))</span>
+    <span class="pi">{</span>
+        <span class="nv">// Process str</span>
+    <span class="pi">}</span>
+<span class="pi">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ifstream file("/Users/piyushkhemka/Downloads/MCC/fmn.txt", ios::in);</span>
+
+   <span class="s">while(getline(file, line)) {</span>
+       <span class="s">stringstream lines(line);</span>
+       <span class="s">vector&lt;int&gt; v;</span>
+       <span class="s">string b;</span>
+       <span class="s">getline(lines, b, '\n');</span>
+       <span class="s">string temp;</span>
+       <span class="s">for(int i = 0;i&lt;b.length();i++) {</span>
+           <span class="s">if(b[i]!=' ') {</span>
+               <span class="s">temp = temp+b[i];</span>
+           <span class="s">}</span>
+           <span class="s">else {</span>
+               <span class="s">v.push_back(stoi(temp));</span>
+               <span class="s">temp.clear();</span>
+           <span class="s">}</span>
+       <span class="s">}</span>
+       <span class="s">v.push_back(stoi(temp));</span>
+       <span class="s">int sum = 0; // Process each line here</span>
+       <span class="s">for(auto it = v.begin();it!=v.end();it++) {</span>
+           <span class="s">sum+= *it;</span>
+       <span class="s">}</span>
+       <span class="s">cout &lt;&lt; sum;</span>
+       <span class="s">cout &lt;&lt; endl &lt;&lt; endl&lt;&lt; endl &lt;&lt; endl&lt;&lt; endl &lt;&lt; endl;</span>
+   <span class="s">}</span></code></pre></figure>
+
 
 	  </div>
 
@@ -175,17 +205,7 @@
 		  
 			 
 				<li><a href="/categories.html#general-ref">
-					general <span>(4)</span>
-					,
-				</a></li>
-			 
-				<li><a href="/categories.html#setup-ref">
-					setup <span>(2)</span>
-					,
-				</a></li>
-			 
-				<li><a href="/categories.html#demo-ref">
-					demo <span>(4)</span>
+					general <span>(1)</span>
 					
 				</a></li>
 			
@@ -200,29 +220,15 @@
 		  
 			 
 				<li>
-					<a href="/tags.html#demo-ref">
-					demo <span>(4)</span>
+					<a href="/tags.html#C++-ref">
+					C++ <span>(3)</span>
 					,
 					</a>
 				</li>
 			 
 				<li>
-					<a href="/tags.html#dbyll-ref">
-					dbyll <span>(4)</span>
-					,
-					</a>
-				</li>
-			 
-				<li>
-					<a href="/tags.html#dbtek-ref">
-					dbtek <span>(4)</span>
-					,
-					</a>
-				</li>
-			 
-				<li>
-					<a href="/tags.html#setup-ref">
-					setup <span>(2)</span>
+					<a href="/tags.html#file-ref">
+					file <span>(1)</span>
 					
 					</a>
 				</li>
@@ -237,7 +243,7 @@
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Configuration"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Reading a file line by line in C++"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -257,7 +263,7 @@
       <section class="col-sm-6 author">
         <img src="http://www.gravatar.com/avatar/" class="img-rounded author-image" />
         <h4 class="section-title author-name">Piyush Khemka</h4>
-        <p class="author-bio">Your stylish, minimalist theme!</p>
+        <p class="author-bio">Add bio in config file (TODO)</p>
       </section>
     </div>
 
@@ -265,10 +271,10 @@
 
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="/general/demo/2013/11/14/sample.html" title="Sample">&larr; Previous</a></li>
+		  <li class="previous disabled"><a>&larr; Previous</a></li>
 		  
 		  
-		  <li class="next"><a href="/general/setup/demo/2013/11/15/hello-world.html" title="Hello World!">Next &rarr;</a></li>
+		  <li class="next"><a href="/ascii/2016/09/12/Int-to-char-and-back-c++.html" title="Ascii conversion from char to int & back in C++">Next &rarr;</a></li>
 		  
 		</ul>
 
@@ -280,6 +286,23 @@
 	</div>
 </article>
 <div class="clearfix"></div>
+
+
+
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'piy9';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 
 
