@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C++
+title: Priority Queues in C++
 categories: [code]
 tags: [C++, priority_queue]
 fullview: true

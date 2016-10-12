@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C++
+title: Ascii conversion from char to int & back in C++
 categories: [ascii]
 tags: [C++, ascii]
 fullview: true
