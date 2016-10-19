@@ -27,12 +27,14 @@ Syntax of priority_queue
 priority_queue<int, vector<int>, less<int> > max_heap;
 priority_queue<int, vector<int>, greater<int> > min_heap;
 
+
 {% endhighlight %}
 
 
 Example of a  priority_queue with custom comparator function
 {% highlight yaml %}
 priority_queue<ListNode*, vector<ListNode*>, CompareNode> min_heap;
+
 {% endhighlight %}
 
 {% highlight yaml %}
@@ -43,4 +45,15 @@ struct CompareNode {
     }
 };
 
+{% endhighlight %}
+
+Priority queue with pair of ints. Min Heap
+{% highlight yaml %}
+priority_queue<pair<int,int>, vector<pair<int,int> >, mycomp >  pq;
+
+struct mycomp {
+    bool operator() (pair<int,int> &a, pair<int,int> &b) {
+        return a.first > b.first;
+    }
+};
 {% endhighlight %}
