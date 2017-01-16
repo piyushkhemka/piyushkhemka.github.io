@@ -10,11 +10,7 @@ comments: true
 Set - sorts elements and doesn't allow duplicates
 <br>
 Multiset - like sets but allows duplicates.
-
-
 <br>
-<br>
-
 
 {% highlight yaml %}
 
