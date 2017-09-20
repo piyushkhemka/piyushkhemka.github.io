@@ -10,14 +10,11 @@ comments: true
 Read a string word by word
 
 {% highlight yaml %}
-
 #include <fstream>
 #include <string>
 
-
 int main()
 {
-
     string t = "First Second Third";
     istringstream iss(t);
     string word;
@@ -26,12 +23,10 @@ int main()
         cout << word << endl;
     }
 }
-
 {% endhighlight %}
 
-{% highlight yaml %}
-
 Output:
+{% highlight yaml %}
 First
 Second
 Third
