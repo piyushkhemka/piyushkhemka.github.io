@@ -7,6 +7,107 @@
 		<atom:link href="/" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Tokenizing Strings in C++</title>
+				<description>&lt;p&gt;Read a string word by word&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#include &amp;lt;fstream&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#include &amp;lt;string&amp;gt;&lt;/span&gt;
+
+
+&lt;span class=&quot;s&quot;&gt;int main()&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;string t = &quot;First Second Third&quot;;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;istringstream iss(t);&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;string word;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;while(iss &amp;gt;&amp;gt; word)&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;/* do stuff with word */&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;cout &amp;lt;&amp;lt; word &amp;lt;&amp;lt; endl;&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;Output&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;First&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;Second&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;Third&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Splitting a string with a delimiter &amp;amp; storing all words in a vector&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;void split(const string&amp;amp; s, char delim,vector&amp;lt;string&amp;gt;&amp;amp; v) {&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;auto i = 0;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;auto pos = s.find(delim);&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;while (pos != string::npos) {&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;v.push_back(s.substr(i, pos-i));&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;i = ++pos;&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;pos = s.find(delim, pos);&lt;/span&gt;
+
+      &lt;span class=&quot;s&quot;&gt;if (pos == string::npos)&lt;/span&gt;
+         &lt;span class=&quot;s&quot;&gt;v.push_back(s.substr(i, s.length()));&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+				<pubDate>Tue, 19 Sep 2017 00:00:00 -0400</pubDate>
+				<link>/general/2017/09/19/String-operations-tokenization-C++.html</link>
+				<guid isPermaLink="true">/general/2017/09/19/String-operations-tokenization-C++.html</guid>
+			</item>
+		
+			<item>
+				<title>Handy String operations in STL</title>
+				<description>&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;isalpha(c) - Returns true if c is an alphabet&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;isalnum(c) - Returns true if c is an alphanumeric character&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;isdigit(c) - Returns true if character c is a digit&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;isupper(c) - Check if uppercase. Returns an int value &amp;gt; 0 if indeed uppercase&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;islower(c) - Check for lowercase&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;isxdigit(c) - Check if a hexadecimal digit - i.e between 0-9, a-e and A-F&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;tolower(c) - The lowercase equivalent to c, if such value exists, or c (unchanged) otherwise.&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;The value is returned as an int value that can be implicitly casted to char.&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;to_string(x) - Converts string x to string&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+				<pubDate>Mon, 15 May 2017 00:00:00 -0400</pubDate>
+				<link>/code/2017/05/15/Handy-String-Operations-in-Stl.html</link>
+				<guid isPermaLink="true">/code/2017/05/15/Handy-String-Operations-in-Stl.html</guid>
+			</item>
+		
+			<item>
+				<title>Multisets, Advance and some handy STL operations</title>
+				<description>&lt;p&gt;Set - sorts elements and doesn’t allow duplicates
+&lt;br /&gt;
+Multiset - like sets but allows duplicates.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt; &lt;span class=&quot;s&quot;&gt;multiset&amp;lt;int&amp;gt; windows;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Example of a insertion in a multiset, deleting an element in it and advancing to mid element in the multiset.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;  &lt;span class=&quot;s&quot;&gt;for(int i = 0;i &amp;lt;nums.size(); ++i) {&lt;/span&gt;
+
+      &lt;span class=&quot;s&quot;&gt;windows.insert(nums[i]);&lt;/span&gt;
+
+      &lt;span class=&quot;s&quot;&gt;if (windows.size() &amp;gt; k) {&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;windows.erase(windows.find(nums[i-k]));&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;
+
+      &lt;span class=&quot;s&quot;&gt;if(windows.size() == k) {&lt;/span&gt;
+
+          &lt;span class=&quot;s&quot;&gt;auto it = windows.begin();&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;advance(it, k/2); // Advance is a STL operation. it is an iterator.&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;cout &amp;lt;&amp;lt; &quot;Mid element in multiset is&quot; &amp;lt;&amp;lt; \*it) &amp;lt;&amp;lt; endl;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+				<pubDate>Sun, 15 Jan 2017 00:00:00 -0500</pubDate>
+				<link>/code/2017/01/15/Multiset-and-other-stl-operations.html</link>
+				<guid isPermaLink="true">/code/2017/01/15/Multiset-and-other-stl-operations.html</guid>
+			</item>
+		
+			<item>
 				<title>Priority Queues in C++</title>
 				<description>&lt;p&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/functional/less/&quot;&gt;http://www.cplusplus.com/reference/functional/less/&lt;/a&gt;&lt;/p&gt;
 
@@ -28,6 +129,16 @@ Syntax of priority_queue
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;struct CompareNode {&lt;/span&gt;
     &lt;span class=&quot;s&quot;&gt;bool operator()(ListNode* const &amp;amp;p1, ListNode* const &amp;amp;p2) {&lt;/span&gt;
         &lt;span class=&quot;s&quot;&gt;return p1-&amp;gt;val &amp;gt; p2-&amp;gt;val;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Priority queue with pair of ints. Min Heap&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;priority_queue&amp;lt;pair&amp;lt;int,int&amp;gt;, vector&amp;lt;pair&amp;lt;int,int&amp;gt; &amp;gt;, mycomp &amp;gt;  pq;&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;struct mycomp {&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;bool operator() (pair&amp;lt;int,int&amp;gt; &amp;amp;a, pair&amp;lt;int,int&amp;gt; &amp;amp;b) {&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;return a.first &amp;gt; b.first;&lt;/span&gt;
     &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 

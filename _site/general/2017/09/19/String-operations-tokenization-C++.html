@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Priority Queues in C++</title>
+	<title>Tokenizing Strings in C++</title>
 	
 	<meta name="author" content="Piyush Khemka">
 
@@ -139,7 +139,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Priority Queues in C++ </h1>
+  <h1>Tokenizing Strings in C++ </h1>
 </div>
 	
 <article>
@@ -147,44 +147,49 @@
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   
-	   October 
-	   10th,
+	   September 
+	   19th,
 	   
-	   2016
+	   2017
 	 </span>
 	  <div class="article_body">
-	  <p><a href="http://www.cplusplus.com/reference/functional/less/">http://www.cplusplus.com/reference/functional/less/</a></p>
+	  <p>Read a string word by word</p>
 
-<p>In priority_queue, the native pop function is implemented as pop_back().
-So to implement a min_heap, your comparator function is greater<int> &amp;
-for max_heap it is less<int></int></int></p>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#include &lt;fstream&gt;</span>
+<span class="c1">#include &lt;string&gt;</span>
 
-<p><br />
-Syntax of priority_queue
-<br /></p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; max_heap;</span>
-<span class="s">priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; min_heap;</span></code></pre></figure>
+<span class="s">int main()</span>
+<span class="pi">{</span>
 
-<p>Example of a  priority_queue with custom comparator function</p>
+    <span class="nv">string t = "First Second Third";</span>
+    <span class="nv">istringstream iss(t);</span>
+    <span class="nv">string word;</span>
+    <span class="nv">while(iss &gt;&gt; word)</span> <span class="pi">{</span>
+        <span class="nv">/* do stuff with word */</span>
+        <span class="nv">cout &lt;&lt; word &lt;&lt; endl;</span>
+    <span class="pi">}</span>
+<span class="pi">}</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">priority_queue&lt;ListNode*, vector&lt;ListNode*&gt;, CompareNode&gt; min_heap;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">Output</span><span class="pi">:</span>
+<span class="s">First</span>
+<span class="s">Second</span>
+<span class="s">Third</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">struct CompareNode {</span>
-    <span class="s">bool operator()(ListNode* const &amp;p1, ListNode* const &amp;p2) {</span>
-        <span class="s">return p1-&gt;val &gt; p2-&gt;val;</span>
+<p>Splitting a string with a delimiter &amp; storing all words in a vector</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">void split(const string&amp; s, char delim,vector&lt;string&gt;&amp; v) {</span>
+    <span class="s">auto i = 0;</span>
+    <span class="s">auto pos = s.find(delim);</span>
+    <span class="s">while (pos != string::npos) {</span>
+      <span class="s">v.push_back(s.substr(i, pos-i));</span>
+      <span class="s">i = ++pos;</span>
+      <span class="s">pos = s.find(delim, pos);</span>
+
+      <span class="s">if (pos == string::npos)</span>
+         <span class="s">v.push_back(s.substr(i, s.length()));</span>
     <span class="s">}</span>
-<span class="err">}</span><span class="s">;</span></code></pre></figure>
-
-<p>Priority queue with pair of ints. Min Heap</p>
-
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">priority_queue&lt;pair&lt;int,int&gt;, vector&lt;pair&lt;int,int&gt; &gt;, mycomp &gt;  pq;</span>
-
-<span class="s">struct mycomp {</span>
-    <span class="s">bool operator() (pair&lt;int,int&gt; &amp;a, pair&lt;int,int&gt; &amp;b) {</span>
-        <span class="s">return a.first &gt; b.first;</span>
-    <span class="s">}</span>
-<span class="err">}</span><span class="s">;</span></code></pre></figure>
+<span class="err">}</span></code></pre></figure>
 
 
 	  </div>
@@ -195,8 +200,8 @@ Syntax of priority_queue
 		  
 		  
 			 
-				<li><a href="/categories.html#code-ref">
-					code <span>(3)</span>
+				<li><a href="/categories.html#general-ref">
+					general <span>(2)</span>
 					
 				</a></li>
 			
@@ -218,8 +223,8 @@ Syntax of priority_queue
 				</li>
 			 
 				<li>
-					<a href="/tags.html#priority_queue-ref">
-					priority_queue <span>(1)</span>
+					<a href="/tags.html#file-ref">
+					file <span>(2)</span>
 					
 					</a>
 				</li>
@@ -234,7 +239,7 @@ Syntax of priority_queue
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Priority Queues in C++"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Tokenizing Strings in C++"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -262,10 +267,10 @@ Syntax of priority_queue
 
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="/ascii/2016/09/12/Int-to-char-and-back-c++.html" title="Ascii conversion from char to int & back in C++">&larr; Previous</a></li>
+		  <li class="previous"><a href="/code/2017/05/15/Handy-String-Operations-in-Stl.html" title="Handy String operations in STL">&larr; Previous</a></li>
 		  
 		  
-		  <li class="next"><a href="/code/2017/01/15/Multiset-and-other-stl-operations.html" title="Multisets, Advance and some handy STL operations">Next &rarr;</a></li>
+			<li class="next disabled"><a>Next &rarr;</a>
 		  
 		</ul>
 
