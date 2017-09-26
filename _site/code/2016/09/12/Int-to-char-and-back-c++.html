@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Tokenizing Strings in C++</title>
+	<title>Ascii conversion from char to int & back in C++</title>
 	
 	<meta name="author" content="Piyush Khemka">
 
@@ -139,7 +139,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Tokenizing Strings in C++ </h1>
+  <h1>Ascii conversion from char to int & back in C++ </h1>
 </div>
 	
 <article>
@@ -148,48 +148,25 @@
 	 <span class="post-date">
 	   
 	   September 
-	   19th,
+	   12th,
 	   
-	   2017
+	   2016
 	 </span>
 	  <div class="article_body">
-	  <p>Read a string word by word</p>
+	  <p>Ascii values</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#include &lt;fstream&gt;</span>
-<span class="c1">#include &lt;string&gt;</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">a = 97, z = 122</span>
+<span class="s">A = 65, Z = 90</span>
+<span class="s">0 = 48</span></code></pre></figure>
 
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">char ch = 'z';</span>
+<span class="s">int num = (int)ch-'a'; // 122-97 =25</span>
+<span class="s">char y = char(num)+'a'; // 25+97 = 122</span>
+<span class="s">cout &lt;&lt; y;</span></code></pre></figure>
 
-<span class="s">int main()</span>
-<span class="pi">{</span>
-
-    <span class="nv">string t = "First Second Third";</span>
-    <span class="nv">istringstream iss(t);</span>
-    <span class="nv">string word;</span>
-    <span class="nv">while(iss &gt;&gt; word)</span> <span class="pi">{</span>
-        <span class="nv">/* do stuff with word */</span>
-        <span class="nv">cout &lt;&lt; word &lt;&lt; endl;</span>
-    <span class="pi">}</span>
-<span class="pi">}</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">Output</span><span class="pi">:</span>
-<span class="s">First</span>
-<span class="s">Second</span>
-<span class="s">Third</span></code></pre></figure>
-
-<p>Splitting a string with a delimiter &amp; storing all words in a vector</p>
-
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">void split(const string&amp; s, char delim,vector&lt;string&gt;&amp; v) {</span>
-    <span class="s">auto i = 0;</span>
-    <span class="s">auto pos = s.find(delim);</span>
-    <span class="s">while (pos != string::npos) {</span>
-      <span class="s">v.push_back(s.substr(i, pos-i));</span>
-      <span class="s">i = ++pos;</span>
-      <span class="s">pos = s.find(delim, pos);</span>
-
-      <span class="s">if (pos == string::npos)</span>
-         <span class="s">v.push_back(s.substr(i, s.length()));</span>
-    <span class="s">}</span>
-<span class="err">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">char one = '1'</span>
+<span class="s">int ans = int(one) - '0' // 49-48 = 1</span>
+<span class="s">cout &lt;&lt; ans; //get one</span></code></pre></figure>
 
 
 	  </div>
@@ -200,8 +177,8 @@
 		  
 		  
 			 
-				<li><a href="/categories.html#general-ref">
-					general <span>(2)</span>
+				<li><a href="/categories.html#code-ref">
+					code <span>(6)</span>
 					
 				</a></li>
 			
@@ -223,8 +200,8 @@
 				</li>
 			 
 				<li>
-					<a href="/tags.html#file-ref">
-					file <span>(2)</span>
+					<a href="/tags.html#ascii-ref">
+					ascii <span>(1)</span>
 					
 					</a>
 				</li>
@@ -239,7 +216,7 @@
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Tokenizing Strings in C++"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Ascii conversion from char to int & back in C++"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -267,10 +244,10 @@
 
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="/code/2017/05/15/Handy-String-Operations-in-Stl.html" title="Handy String operations in STL">&larr; Previous</a></li>
+		  <li class="previous"><a href="/code/2016/06/12/Reading-a-file-in-C++.html" title="Reading a file line by line in C++">&larr; Previous</a></li>
 		  
 		  
-			<li class="next disabled"><a>Next &rarr;</a>
+		  <li class="next"><a href="/code/2016/10/10/priority-queues-in-c++.html" title="Priority Queues in C++">Next &rarr;</a></li>
 		  
 		</ul>
 

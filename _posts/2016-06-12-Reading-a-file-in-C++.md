@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reading a file line by line in C++
-categories: [general]
+categories: [code]
 tags: [C++, file]
 fullview: true
 comments: true

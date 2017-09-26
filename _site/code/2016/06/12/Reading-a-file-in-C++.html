@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Ascii conversion from char to int & back in C++</title>
+	<title>Reading a file line by line in C++</title>
 	
 	<meta name="author" content="Piyush Khemka">
 
@@ -139,7 +139,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Ascii conversion from char to int & back in C++ </h1>
+  <h1>Reading a file line by line in C++ </h1>
 </div>
 	
 <article>
@@ -147,26 +147,53 @@
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   
-	   September 
+	   June 
 	   12th,
 	   
 	   2016
 	 </span>
 	  <div class="article_body">
-	  <p>Ascii values</p>
+	  <p>Read a file line by line in C++</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">a = 97, z = 122</span>
-<span class="s">A = 65, Z = 90</span>
-<span class="s">0 = 48</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#include &lt;fstream&gt;</span>
+<span class="c1">#include &lt;string&gt;</span>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">char ch = 'z';</span>
-<span class="s">int num = (int)ch-'a'; // 122-97 =25</span>
-<span class="s">char y = char(num)+'a'; // 25+97 = 122</span>
-<span class="s">cout &lt;&lt; y;</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">char one = '1'</span>
-<span class="s">int ans = int(one) - '0' // 49-48 = 1</span>
-<span class="s">cout &lt;&lt; ans; //get one</span></code></pre></figure>
+<span class="s">int main()</span>
+<span class="pi">{</span>
+    <span class="nv">std</span><span class="pi">::</span><span class="nv">ifstream file("Read.txt");</span>
+    <span class="nv">std</span><span class="pi">::</span><span class="nv">string str;</span>
+    <span class="nv">while (std</span><span class="pi">::</span><span class="nv">getline(file</span><span class="pi">,</span> <span class="nv">str))</span>
+    <span class="pi">{</span>
+        <span class="nv">// Process str</span>
+    <span class="pi">}</span>
+<span class="pi">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ifstream file("/Users/piyushkhemka/Downloads/MCC/fmn.txt", ios::in);</span>
+
+   <span class="s">while(getline(file, line)) {</span>
+       <span class="s">stringstream lines(line);</span>
+       <span class="s">vector&lt;int&gt; v;</span>
+       <span class="s">string b;</span>
+       <span class="s">getline(lines, b, '\n');</span>
+       <span class="s">string temp;</span>
+       <span class="s">for(int i = 0;i&lt;b.length();i++) {</span>
+           <span class="s">if(b[i]!=' ') {</span>
+               <span class="s">temp = temp+b[i];</span>
+           <span class="s">}</span>
+           <span class="s">else {</span>
+               <span class="s">v.push_back(stoi(temp));</span>
+               <span class="s">temp.clear();</span>
+           <span class="s">}</span>
+       <span class="s">}</span>
+       <span class="s">v.push_back(stoi(temp));</span>
+       <span class="s">int sum = 0; // Process each line here</span>
+       <span class="s">for(auto it = v.begin();it!=v.end();it++) {</span>
+           <span class="s">sum+= *it;</span>
+       <span class="s">}</span>
+       <span class="s">cout &lt;&lt; sum;</span>
+       <span class="s">cout &lt;&lt; endl &lt;&lt; endl&lt;&lt; endl &lt;&lt; endl&lt;&lt; endl &lt;&lt; endl;</span>
+   <span class="s">}</span></code></pre></figure>
 
 
 	  </div>
@@ -177,8 +204,8 @@
 		  
 		  
 			 
-				<li><a href="/categories.html#ascii-ref">
-					ascii <span>(1)</span>
+				<li><a href="/categories.html#code-ref">
+					code <span>(6)</span>
 					
 				</a></li>
 			
@@ -200,8 +227,8 @@
 				</li>
 			 
 				<li>
-					<a href="/tags.html#ascii-ref">
-					ascii <span>(1)</span>
+					<a href="/tags.html#file-ref">
+					file <span>(2)</span>
 					
 					</a>
 				</li>
@@ -216,7 +243,7 @@
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Ascii conversion from char to int & back in C++"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Reading a file line by line in C++"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -244,10 +271,10 @@
 
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="/general/2016/06/12/Reading-a-file-in-C++.html" title="Reading a file line by line in C++">&larr; Previous</a></li>
+		  <li class="previous disabled"><a>&larr; Previous</a></li>
 		  
 		  
-		  <li class="next"><a href="/code/2016/10/10/priority-queues-in-c++.html" title="Priority Queues in C++">Next &rarr;</a></li>
+		  <li class="next"><a href="/code/2016/09/12/Int-to-char-and-back-c++.html" title="Ascii conversion from char to int & back in C++">Next &rarr;</a></li>
 		  
 		</ul>
 

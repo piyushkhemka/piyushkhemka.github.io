@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tokenizing Strings in C++
-categories: [general]
+categories: [code]
 tags: [C++, file]
 fullview: true
 comments: true

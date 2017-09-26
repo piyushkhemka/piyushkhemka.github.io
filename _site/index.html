@@ -149,13 +149,66 @@
   <span class="post-date">
     
     September
+    25th,
+    
+    2017
+  </span>
+
+  <h2>
+    <a href="/system/2017/09/25/System-Design-Questions.html">System Design Questions step by step</a>
+  </h2>
+
+  <div>
+    
+    <p>Steps for System Design Questions</p>
+
+<p>Steps</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">1. Use Cases</span>
+<span class="s">2. Constraints</span>
+<span class="s">3. Abstract Design</span>
+<span class="s">4. Bottleneck</span>
+<span class="s">5. Scalability</span></code></pre></figure>
+
+<h2 id="use-cases">Use Cases</h2>
+
+<p><img src="./assets/img/posts/use_case.png" alt="alt Use Cases" title="Use Cases" /></p>
+
+<h2 id="constraints">Constraints</h2>
+
+<p><img src="./assets/img/posts/constraints.png" alt="alt Constraints" title="Constraints" /></p>
+
+<h2 id="abstract-design">Abstract Design</h2>
+
+<p><img src="./assets/img/posts/abstract_design.png" alt="alt Abstract Design" title="Abstract Design" /></p>
+
+<h2 id="bottleneck">Bottleneck</h2>
+
+<p><img src="./assets/img/posts/scalable1.png" alt="alt Scalablility" title="Scalablility" /></p>
+
+<h2 id="scalability">Scalability</h2>
+
+<p><img src="./assets/img/posts/scalable2.png" alt="alt Scalablility2" title="Scalability2" /></p>
+
+
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+
+  <span class="post-date">
+    
+    September
     19th,
     
     2017
   </span>
 
   <h2>
-    <a href="/general/2017/09/19/String-operations-tokenization-C++.html">Tokenizing Strings in C++</a>
+    <a href="/code/2017/09/19/String-operations-tokenization-C++.html">Tokenizing Strings in C++</a>
   </h2>
 
   <div>
@@ -165,10 +218,8 @@
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#include &lt;fstream&gt;</span>
 <span class="c1">#include &lt;string&gt;</span>
 
-
 <span class="s">int main()</span>
 <span class="pi">{</span>
-
     <span class="nv">string t = "First Second Third";</span>
     <span class="nv">istringstream iss(t);</span>
     <span class="nv">string word;</span>
@@ -178,8 +229,9 @@
     <span class="pi">}</span>
 <span class="pi">}</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">Output</span><span class="pi">:</span>
-<span class="s">First</span>
+<p>Output:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">First</span>
 <span class="s">Second</span>
 <span class="s">Third</span></code></pre></figure>
 
@@ -319,6 +371,16 @@ Syntax of priority_queue
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; max_heap;</span>
 <span class="s">priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; min_heap;</span></code></pre></figure>
 
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">http://www.cplusplus.com/reference/functional/less/</span>
+
+
+<span class="s">In priority_queue, the native pop function is implemented as pop_back(). So to implement a min_heap, your comparator function is greater&lt;int&gt; &amp; for max_heap it is less&lt;int&gt;</span>
+
+<span class="s">priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; max_heap;</span>
+<span class="s">priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; min_heap;</span></code></pre></figure>
+
+<p>// in blog also define a couple of self defined comparator functions.</p>
+
 <p>Example of a  priority_queue with custom comparator function</p>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">priority_queue&lt;ListNode*, vector&lt;ListNode*&gt;, CompareNode&gt; min_heap;</span></code></pre></figure>
@@ -357,7 +419,7 @@ Syntax of priority_queue
   </span>
 
   <h2>
-    <a href="/ascii/2016/09/12/Int-to-char-and-back-c++.html">Ascii conversion from char to int & back in C++</a>
+    <a href="/code/2016/09/12/Int-to-char-and-back-c++.html">Ascii conversion from char to int & back in C++</a>
   </h2>
 
   <div>
@@ -395,7 +457,7 @@ Syntax of priority_queue
   </span>
 
   <h2>
-    <a href="/general/2016/06/12/Reading-a-file-in-C++.html">Reading a file line by line in C++</a>
+    <a href="/code/2016/06/12/Reading-a-file-in-C++.html">Reading a file line by line in C++</a>
   </h2>
 
   <div>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Reading a file line by line in C++</title>
+	<title>System Design Questions step by step</title>
 	
 	<meta name="author" content="Piyush Khemka">
 
@@ -139,7 +139,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Reading a file line by line in C++ </h1>
+  <h1>System Design Questions step by step </h1>
 </div>
 	
 <article>
@@ -147,53 +147,41 @@
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   
-	   June 
-	   12th,
+	   September 
+	   25th,
 	   
-	   2016
+	   2017
 	 </span>
 	  <div class="article_body">
-	  <p>Read a file line by line in C++</p>
+	  <p>Steps for System Design Questions</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#include &lt;fstream&gt;</span>
-<span class="c1">#include &lt;string&gt;</span>
+<p>Steps</p>
 
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">1. Use Cases</span>
+<span class="s">2. Constraints</span>
+<span class="s">3. Abstract Design</span>
+<span class="s">4. Bottleneck</span>
+<span class="s">5. Scalability</span></code></pre></figure>
 
-<span class="s">int main()</span>
-<span class="pi">{</span>
-    <span class="nv">std</span><span class="pi">::</span><span class="nv">ifstream file("Read.txt");</span>
-    <span class="nv">std</span><span class="pi">::</span><span class="nv">string str;</span>
-    <span class="nv">while (std</span><span class="pi">::</span><span class="nv">getline(file</span><span class="pi">,</span> <span class="nv">str))</span>
-    <span class="pi">{</span>
-        <span class="nv">// Process str</span>
-    <span class="pi">}</span>
-<span class="pi">}</span></code></pre></figure>
+<h2 id="use-cases">Use Cases</h2>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ifstream file("/Users/piyushkhemka/Downloads/MCC/fmn.txt", ios::in);</span>
+<p><img src="./assets/img/posts/use_case.png" alt="alt Use Cases" title="Use Cases" /></p>
 
-   <span class="s">while(getline(file, line)) {</span>
-       <span class="s">stringstream lines(line);</span>
-       <span class="s">vector&lt;int&gt; v;</span>
-       <span class="s">string b;</span>
-       <span class="s">getline(lines, b, '\n');</span>
-       <span class="s">string temp;</span>
-       <span class="s">for(int i = 0;i&lt;b.length();i++) {</span>
-           <span class="s">if(b[i]!=' ') {</span>
-               <span class="s">temp = temp+b[i];</span>
-           <span class="s">}</span>
-           <span class="s">else {</span>
-               <span class="s">v.push_back(stoi(temp));</span>
-               <span class="s">temp.clear();</span>
-           <span class="s">}</span>
-       <span class="s">}</span>
-       <span class="s">v.push_back(stoi(temp));</span>
-       <span class="s">int sum = 0; // Process each line here</span>
-       <span class="s">for(auto it = v.begin();it!=v.end();it++) {</span>
-           <span class="s">sum+= *it;</span>
-       <span class="s">}</span>
-       <span class="s">cout &lt;&lt; sum;</span>
-       <span class="s">cout &lt;&lt; endl &lt;&lt; endl&lt;&lt; endl &lt;&lt; endl&lt;&lt; endl &lt;&lt; endl;</span>
-   <span class="s">}</span></code></pre></figure>
+<h2 id="constraints">Constraints</h2>
+
+<p><img src="./assets/img/posts/constraints.png" alt="alt Constraints" title="Constraints" /></p>
+
+<h2 id="abstract-design">Abstract Design</h2>
+
+<p><img src="./assets/img/posts/abstract_design.png" alt="alt Abstract Design" title="Abstract Design" /></p>
+
+<h2 id="bottleneck">Bottleneck</h2>
+
+<p><img src="./assets/img/posts/scalable1.png" alt="alt Scalablility" title="Scalablility" /></p>
+
+<h2 id="scalability">Scalability</h2>
+
+<p><img src="./assets/img/posts/scalable2.png" alt="alt Scalablility2" title="Scalability2" /></p>
 
 
 	  </div>
@@ -204,8 +192,8 @@
 		  
 		  
 			 
-				<li><a href="/categories.html#general-ref">
-					general <span>(2)</span>
+				<li><a href="/categories.html#system-ref">
+					system <span>(1)</span>
 					
 				</a></li>
 			
@@ -220,15 +208,8 @@
 		  
 			 
 				<li>
-					<a href="/tags.html#C++-ref">
-					C++ <span>(6)</span>
-					,
-					</a>
-				</li>
-			 
-				<li>
-					<a href="/tags.html#file-ref">
-					file <span>(2)</span>
+					<a href="/tags.html#System-ref">
+					System <span>(1)</span>
 					
 					</a>
 				</li>
@@ -243,7 +224,7 @@
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Reading a file line by line in C++"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=System Design Questions step by step"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -271,10 +252,10 @@
 
 		<ul class="pager">
 		  
-		  <li class="previous disabled"><a>&larr; Previous</a></li>
+		  <li class="previous"><a href="/code/2017/09/19/String-operations-tokenization-C++.html" title="Tokenizing Strings in C++">&larr; Previous</a></li>
 		  
 		  
-		  <li class="next"><a href="/ascii/2016/09/12/Int-to-char-and-back-c++.html" title="Ascii conversion from char to int & back in C++">Next &rarr;</a></li>
+			<li class="next disabled"><a>Next &rarr;</a>
 		  
 		</ul>
 

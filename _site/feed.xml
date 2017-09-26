@@ -7,16 +7,52 @@
 		<atom:link href="/" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>System Design Questions step by step</title>
+				<description>&lt;p&gt;Steps for System Design Questions&lt;/p&gt;
+
+&lt;p&gt;Steps&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;1. Use Cases&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;2. Constraints&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;3. Abstract Design&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;4. Bottleneck&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;5. Scalability&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;use-cases&quot;&gt;Use Cases&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/posts/use_case.png&quot; alt=&quot;alt Use Cases&quot; title=&quot;Use Cases&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;constraints&quot;&gt;Constraints&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/posts/constraints.png&quot; alt=&quot;alt Constraints&quot; title=&quot;Constraints&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;abstract-design&quot;&gt;Abstract Design&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/posts/abstract_design.png&quot; alt=&quot;alt Abstract Design&quot; title=&quot;Abstract Design&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;bottleneck&quot;&gt;Bottleneck&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/posts/scalable1.png&quot; alt=&quot;alt Scalablility&quot; title=&quot;Scalablility&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;scalability&quot;&gt;Scalability&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/img/posts/scalable2.png&quot; alt=&quot;alt Scalablility2&quot; title=&quot;Scalability2&quot; /&gt;&lt;/p&gt;
+
+</description>
+				<pubDate>Mon, 25 Sep 2017 00:00:00 -0400</pubDate>
+				<link>/system/2017/09/25/System-Design-Questions.html</link>
+				<guid isPermaLink="true">/system/2017/09/25/System-Design-Questions.html</guid>
+			</item>
+		
+			<item>
 				<title>Tokenizing Strings in C++</title>
 				<description>&lt;p&gt;Read a string word by word&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#include &amp;lt;fstream&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#include &amp;lt;string&amp;gt;&lt;/span&gt;
 
-
 &lt;span class=&quot;s&quot;&gt;int main()&lt;/span&gt;
 &lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;
-
     &lt;span class=&quot;nv&quot;&gt;string t = &quot;First Second Third&quot;;&lt;/span&gt;
     &lt;span class=&quot;nv&quot;&gt;istringstream iss(t);&lt;/span&gt;
     &lt;span class=&quot;nv&quot;&gt;string word;&lt;/span&gt;
@@ -26,8 +62,9 @@
     &lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;Output&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;First&lt;/span&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;First&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;Second&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;Third&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -48,8 +85,8 @@
 
 </description>
 				<pubDate>Tue, 19 Sep 2017 00:00:00 -0400</pubDate>
-				<link>/general/2017/09/19/String-operations-tokenization-C++.html</link>
-				<guid isPermaLink="true">/general/2017/09/19/String-operations-tokenization-C++.html</guid>
+				<link>/code/2017/09/19/String-operations-tokenization-C++.html</link>
+				<guid isPermaLink="true">/code/2017/09/19/String-operations-tokenization-C++.html</guid>
 			</item>
 		
 			<item>
@@ -122,6 +159,16 @@ Syntax of priority_queue
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, less&amp;lt;int&amp;gt; &amp;gt; max_heap;&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, greater&amp;lt;int&amp;gt; &amp;gt; min_heap;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;http://www.cplusplus.com/reference/functional/less/&lt;/span&gt;
+
+
+&lt;span class=&quot;s&quot;&gt;In priority_queue, the native pop function is implemented as pop_back(). So to implement a min_heap, your comparator function is greater&amp;lt;int&amp;gt; &amp;amp; for max_heap it is less&amp;lt;int&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, less&amp;lt;int&amp;gt; &amp;gt; max_heap;&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, greater&amp;lt;int&amp;gt; &amp;gt; min_heap;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;// in blog also define a couple of self defined comparator functions.&lt;/p&gt;
+
 &lt;p&gt;Example of a  priority_queue with custom comparator function&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;priority_queue&amp;lt;ListNode*, vector&amp;lt;ListNode*&amp;gt;, CompareNode&amp;gt; min_heap;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -167,8 +214,8 @@ Syntax of priority_queue
 
 </description>
 				<pubDate>Mon, 12 Sep 2016 00:00:00 -0400</pubDate>
-				<link>/ascii/2016/09/12/Int-to-char-and-back-c++.html</link>
-				<guid isPermaLink="true">/ascii/2016/09/12/Int-to-char-and-back-c++.html</guid>
+				<link>/code/2016/09/12/Int-to-char-and-back-c++.html</link>
+				<guid isPermaLink="true">/code/2016/09/12/Int-to-char-and-back-c++.html</guid>
 			</item>
 		
 			<item>
@@ -217,8 +264,8 @@ Syntax of priority_queue
 
 </description>
 				<pubDate>Sun, 12 Jun 2016 00:00:00 -0400</pubDate>
-				<link>/general/2016/06/12/Reading-a-file-in-C++.html</link>
-				<guid isPermaLink="true">/general/2016/06/12/Reading-a-file-in-C++.html</guid>
+				<link>/code/2016/06/12/Reading-a-file-in-C++.html</link>
+				<guid isPermaLink="true">/code/2016/06/12/Reading-a-file-in-C++.html</guid>
 			</item>
 		
 	</channel>

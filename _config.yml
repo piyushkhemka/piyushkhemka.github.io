@@ -12,7 +12,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: Piyush
+      title: Interview Prep
 
 description: Piyush's site
 author:
@@ -22,7 +22,7 @@ author:
 #  twitter: dbtek
  # pinterest: asd123
   linkedin: khemkapiyush
-  bio:  Add bio in config file (TODO)
+  bio:  Software Engineer
  # email_md5: 726351295ec82e145928582f595aa3aa
 
 #rss_path: feed.xml

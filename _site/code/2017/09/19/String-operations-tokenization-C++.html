@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Handy String operations in STL</title>
+	<title>Tokenizing Strings in C++</title>
 	
 	<meta name="author" content="Piyush Khemka">
 
@@ -139,7 +139,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>Handy String operations in STL </h1>
+  <h1>Tokenizing Strings in C++ </h1>
 </div>
 	
 <article>
@@ -147,25 +147,48 @@
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   
-	   May 
-	   15th,
+	   September 
+	   19th,
 	   
 	   2017
 	 </span>
 	  <div class="article_body">
-	  <p><br />
-<br /></p>
+	  <p>Read a string word by word</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">isalpha(c) - Returns true if c is an alphabet</span>
-<span class="s">isalnum(c) - Returns true if c is an alphanumeric character</span>
-<span class="s">isdigit(c) - Returns true if character c is a digit</span>
-<span class="s">isupper(c) - Check if uppercase. Returns an int value &gt; 0 if indeed uppercase</span>
-<span class="s">islower(c) - Check for lowercase</span>
-<span class="s">isxdigit(c) - Check if a hexadecimal digit - i.e between 0-9, a-e and A-F</span>
-<span class="s">tolower(c) - The lowercase equivalent to c, if such value exists, or c (unchanged) otherwise.</span>
-<span class="s">The value is returned as an int value that can be implicitly casted to char.</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#include &lt;fstream&gt;</span>
+<span class="c1">#include &lt;string&gt;</span>
 
-<span class="s">to_string(x) - Converts string x to string</span></code></pre></figure>
+<span class="s">int main()</span>
+<span class="pi">{</span>
+    <span class="nv">string t = "First Second Third";</span>
+    <span class="nv">istringstream iss(t);</span>
+    <span class="nv">string word;</span>
+    <span class="nv">while(iss &gt;&gt; word)</span> <span class="pi">{</span>
+        <span class="nv">/* do stuff with word */</span>
+        <span class="nv">cout &lt;&lt; word &lt;&lt; endl;</span>
+    <span class="pi">}</span>
+<span class="pi">}</span></code></pre></figure>
+
+<p>Output:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">First</span>
+<span class="s">Second</span>
+<span class="s">Third</span></code></pre></figure>
+
+<p>Splitting a string with a delimiter &amp; storing all words in a vector</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">void split(const string&amp; s, char delim,vector&lt;string&gt;&amp; v) {</span>
+    <span class="s">auto i = 0;</span>
+    <span class="s">auto pos = s.find(delim);</span>
+    <span class="s">while (pos != string::npos) {</span>
+      <span class="s">v.push_back(s.substr(i, pos-i));</span>
+      <span class="s">i = ++pos;</span>
+      <span class="s">pos = s.find(delim, pos);</span>
+
+      <span class="s">if (pos == string::npos)</span>
+         <span class="s">v.push_back(s.substr(i, s.length()));</span>
+    <span class="s">}</span>
+<span class="err">}</span></code></pre></figure>
 
 
 	  </div>
@@ -199,8 +222,8 @@
 				</li>
 			 
 				<li>
-					<a href="/tags.html#STL-ref">
-					STL <span>(2)</span>
+					<a href="/tags.html#file-ref">
+					file <span>(2)</span>
 					
 					</a>
 				</li>
@@ -215,7 +238,7 @@
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Handy String operations in STL"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Tokenizing Strings in C++"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -243,10 +266,10 @@
 
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="/code/2017/01/15/Multiset-and-other-stl-operations.html" title="Multisets, Advance and some handy STL operations">&larr; Previous</a></li>
+		  <li class="previous"><a href="/code/2017/05/15/Handy-String-Operations-in-Stl.html" title="Handy String operations in STL">&larr; Previous</a></li>
 		  
 		  
-		  <li class="next"><a href="/code/2017/09/19/String-operations-tokenization-C++.html" title="Tokenizing Strings in C++">Next &rarr;</a></li>
+		  <li class="next"><a href="/system/2017/09/25/System-Design-Questions.html" title="System Design Questions step by step">Next &rarr;</a></li>
 		  
 		</ul>
 

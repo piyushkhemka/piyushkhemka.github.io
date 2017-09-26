@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ascii conversion from char to int & back in C++
-categories: [ascii]
+categories: [code]
 tags: [C++, ascii]
 fullview: true
 comments: true

@@ -166,6 +166,16 @@ Syntax of priority_queue
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; max_heap;</span>
 <span class="s">priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; min_heap;</span></code></pre></figure>
 
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">http://www.cplusplus.com/reference/functional/less/</span>
+
+
+<span class="s">In priority_queue, the native pop function is implemented as pop_back(). So to implement a min_heap, your comparator function is greater&lt;int&gt; &amp; for max_heap it is less&lt;int&gt;</span>
+
+<span class="s">priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; max_heap;</span>
+<span class="s">priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt; &gt; min_heap;</span></code></pre></figure>
+
+<p>// in blog also define a couple of self defined comparator functions.</p>
+
 <p>Example of a  priority_queue with custom comparator function</p>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">priority_queue&lt;ListNode*, vector&lt;ListNode*&gt;, CompareNode&gt; min_heap;</span></code></pre></figure>
@@ -196,7 +206,7 @@ Syntax of priority_queue
 		  
 			 
 				<li><a href="/categories.html#code-ref">
-					code <span>(3)</span>
+					code <span>(6)</span>
 					
 				</a></li>
 			
@@ -262,7 +272,7 @@ Syntax of priority_queue
 
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="/ascii/2016/09/12/Int-to-char-and-back-c++.html" title="Ascii conversion from char to int & back in C++">&larr; Previous</a></li>
+		  <li class="previous"><a href="/code/2016/09/12/Int-to-char-and-back-c++.html" title="Ascii conversion from char to int & back in C++">&larr; Previous</a></li>
 		  
 		  
 		  <li class="next"><a href="/code/2017/01/15/Multiset-and-other-stl-operations.html" title="Multisets, Advance and some handy STL operations">Next &rarr;</a></li>
