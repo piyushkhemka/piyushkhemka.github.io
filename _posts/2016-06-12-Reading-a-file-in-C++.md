@@ -1,31 +1,53 @@
 ---
 layout: post
-title: Reading a file line by line in C++
+title: Reading & Writing to a file line by line in C++
 categories: [code]
 tags: [C++, file]
 fullview: true
 comments: true
 ---
 
-Read a file line by line in C++
+Read a file line by line in C++ & then write to it.
 
 {% highlight yaml %}
 
-#include <fstream>
+#include <iostream>
 #include <string>
+#include <fstream>
+using namespace std;
 
+int main(int argc, const char * argv[]) {
 
-int main()
-{
-    std::ifstream file("Read.txt");
-    std::string str;
-    while (std::getline(file, str))
-    {
-        // Process str
+    // Reading a file
+    ifstream file("/Users/piyushkhemka/Desktop/test.txt");
+    string str;
+    while (getline(file, str)) {
+        cout << str << endl;
     }
+
+
+    // Writing to a file
+    ofstream myfile;
+    myfile.open ("/Users/piyushkhemka/Desktop/example.txt",
+                 ios::out | ios::app);
+    myfile << "Writing this to a file.\n";
+    myfile.close();
+    return 0;
+
 }
 
 {% endhighlight %}
+
+
+
+Flag     | Value
+-------- | ---
+ios::in  | Open for input operations.
+ios::out   | Open for output operations.
+ios::binary  | Open in binary mode.
+ios::ate   | Set the initial position at the end of the file.
+ios::app   | All output operations are performed at the end of the file, appending the content to the current content of the file.
+ios::trunc   | If the file is opened for output operations and it already existed, its previous content is deleted and replaced by the new one.
 
 {% highlight yaml %}
 
