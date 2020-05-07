@@ -3,10 +3,10 @@
   <channel>
     <title>Blog</title>
     <description></description>
-    <link>http://localhost:4000/blog/</link>
-    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 May 2020 01:36:33 -0700</pubDate>
-    <lastBuildDate>Thu, 07 May 2020 01:36:33 -0700</lastBuildDate>
+    <link>/blog/</link>
+    <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 07 May 2020 01:48:24 -0700</pubDate>
+    <lastBuildDate>Thu, 07 May 2020 01:48:24 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -14,8 +14,8 @@
         <description>&lt;p&gt;Hello World&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 -0700</pubDate>
-        <link>http://localhost:4000/blog/hello-world/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/hello-world/</guid>
+        <link>/blog/hello-world/</link>
+        <guid isPermaLink="true">/blog/hello-world/</guid>
         
         
       </item>
