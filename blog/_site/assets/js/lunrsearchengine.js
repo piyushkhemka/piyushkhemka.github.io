@@ -1,27 +1,32 @@
 
 var documents = [{
     "id": 0,
-    "url": "/blog/404.html",
+    "url": "http://localhost:4000/blog/404.html",
     "title": "404",
     "body": "404 Page does not exist!Please use the search bar at the top or visit our homepage! "
     }, {
     "id": 1,
-    "url": "/blog/categories",
+    "url": "http://localhost:4000/blog/categories",
     "title": "Categories",
     "body": ""
     }, {
     "id": 2,
-    "url": "/blog/",
+    "url": "http://localhost:4000/blog/",
     "title": "Home",
-    "body": "      Featured:                     All Stories:                                                             Hello World              :       Hello World:                               06 May 2020        &lt;/span&gt;                                    "
+    "body": "      Featured:                     All Stories:                                                                                                     Hello World              :       Hello World:                                                                               Piyush                06 May 2020                                            "
     }, {
     "id": 3,
-    "url": "/blog/robots.txt",
+    "url": "http://localhost:4000/blog/_pages/about/",
+    "title": "",
+    "body": ""
+    }, {
+    "id": 4,
+    "url": "http://localhost:4000/blog/robots.txt",
     "title": "",
     "body": "      Sitemap: {{ “sitemap. xml”   absolute_url }}   "
     }, {
-    "id": 4,
-    "url": "/blog/hello-world/",
+    "id": 5,
+    "url": "http://localhost:4000/blog/hello-world/",
     "title": "Hello World",
     "body": "2020/05/06 - Hello World "
     }];

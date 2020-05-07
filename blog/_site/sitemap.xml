@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/blog/hello-world/</loc>
+<loc>http://localhost:4000/blog/hello-world/</loc>
 <lastmod>2020-05-06T00:00:00-07:00</lastmod>
 </url>
 <url>
-<loc>/blog/categories</loc>
+<loc>http://localhost:4000/blog/categories</loc>
 </url>
 <url>
-<loc>/blog/</loc>
+<loc>http://localhost:4000/blog/</loc>
 </url>
 <url>
-<loc>/blog/tags</loc>
+<loc>http://localhost:4000/blog/tags</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/category/jekyll/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/category/tutorial/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/_pages/about/</loc>
 </url>
 </urlset>
