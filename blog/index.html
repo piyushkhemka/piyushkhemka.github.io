@@ -33,7 +33,7 @@ about: ''
 
 
     <div class="extra-pagination inner">
-        {% include pagination.html %}
+        {% include_relative _includes/pagination.html %}
     </div>
 
     {% for post in paginator.posts %}
@@ -61,6 +61,6 @@ about: ''
 
     {% endfor %}
 
-    {% include pagination.html %}
+    {% include_relative _includes/pagination.html %}
 
 </main>

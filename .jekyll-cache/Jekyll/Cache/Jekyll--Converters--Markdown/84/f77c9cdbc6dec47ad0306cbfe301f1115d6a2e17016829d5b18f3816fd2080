@@ -1,0 +1,15 @@
+I"<p><br />
+<br /></p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">isalpha(c) - Returns </span><span class="no">true</span><span class="s"> if c is an alphabet</span>
+<span class="s">isalnum(c) - Returns </span><span class="no">true</span><span class="s"> if c is an alphanumeric character</span>
+<span class="s">isdigit(c) - Returns </span><span class="no">true</span><span class="s"> if character c is a digit</span>
+<span class="s">isupper(c) - Check if uppercase. Returns an int value &gt; 0 if indeed uppercase</span>
+<span class="s">islower(c) - Check for lowercase</span>
+<span class="s">isxdigit(c) - Check if a hexadecimal digit - i.e between 0-9, a-e and A-F</span>
+<span class="s">tolower(c) - The lowercase equivalent to c, if such value exists, or c (unchanged) otherwise.</span>
+<span class="s">The value is returned as an int value that can be implicitly casted to char.</span>
+
+<span class="s">to_string(x) - Converts string x to string</span></code></pre></figure>
+
+:ET

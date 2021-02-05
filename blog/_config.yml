@@ -1,5 +1,5 @@
-name: Blog
-description: Blogging about stuffs
+name: "Blog"
+description: "Blogging about stuffs"
 meta_description: "My blog & thoughts"
 
 markdown: kramdown
@@ -7,12 +7,12 @@ highlighter: rouge
 logo: false
 paginate: 10
 baseurl: "/blog"
-domain_name: "https://piyushkhemka.me"
+domain_name: "https://piyushkhemka.me/"
 google_analytics: "UA-79238615-2"
 plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
-url: "https://piyushkhemka.me/blog"
+url: "https://piyushkhemka.me/blog/"
 author: "Piyush Khemka"
 
 # Disqus config

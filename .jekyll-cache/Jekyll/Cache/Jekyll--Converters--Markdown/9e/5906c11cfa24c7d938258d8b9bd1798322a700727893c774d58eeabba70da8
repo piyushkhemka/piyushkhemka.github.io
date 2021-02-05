@@ -1,0 +1,26 @@
+I"„<p>Set - sorts elements and doesnâ€™t allow duplicates
+<br />
+Multiset - like sets but allows duplicates.
+<br /></p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"> <span class="s">multiset&lt;int&gt; windows;</span></code></pre></figure>
+
+<p>Example of a insertion in a multiset, deleting an element in it and advancing to mid element in the multiset.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">  <span class="s">for(int i = 0;i &lt;nums.size(); ++i) {</span>
+
+      <span class="s">windows.insert(nums[i]);</span>
+
+      <span class="s">if (windows.size() &gt; k) {</span>
+          <span class="s">windows.erase(windows.find(nums[i-k]));</span>
+      <span class="s">}</span>
+
+      <span class="s">if(windows.size() == k) {</span>
+
+          <span class="s">auto it = windows.begin();</span>
+          <span class="s">advance(it, k/2); // Advance is a STL operation. it is an iterator.</span>
+          <span class="s">cout &lt;&lt; "Mid element in multiset is" &lt;&lt; \*it) &lt;&lt; endl;</span>
+        <span class="s">}</span>
+    <span class="s">}</span></code></pre></figure>
+
+:ET
