@@ -3,11 +3,11 @@
   <channel>
     <title></title>
     <description>Blogging about stuffs</description>
-    <link>https://piyushkhemka.me/blog/</link>
-    <atom:link href="https://piyushkhemka.me/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 05 Feb 2021 00:36:25 -0800</pubDate>
-    <lastBuildDate>Fri, 05 Feb 2021 00:36:25 -0800</lastBuildDate>
-    <generator>Jekyll v4.2.0</generator>
+    <link>http://localhost:4000/blog/</link>
+    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 05 Feb 2021 00:59:17 -0800</pubDate>
+    <lastBuildDate>Fri, 05 Feb 2021 00:59:17 -0800</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>Coming soon test 2</title>
@@ -25,8 +25,8 @@
 
 </description>
         <pubDate>Thu, 04 Feb 2021 16:13:00 -0800</pubDate>
-        <link>https://piyushkhemka.me/blog/testing/2021/02/04/hello-world_2.html</link>
-        <guid isPermaLink="true">https://piyushkhemka.me/blog/testing/2021/02/04/hello-world_2.html</guid>
+        <link>http://localhost:4000/blog/testing/2021/02/04/hello-world_2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/testing/2021/02/04/hello-world_2.html</guid>
         
         
         <category>testing</category>
@@ -38,8 +38,8 @@
         <description>&lt;p&gt;Coming soon&lt;/p&gt;
 </description>
         <pubDate>Thu, 04 Feb 2021 16:13:00 -0800</pubDate>
-        <link>https://piyushkhemka.me/blog/setup/2021/02/04/hello-world.html</link>
-        <guid isPermaLink="true">https://piyushkhemka.me/blog/setup/2021/02/04/hello-world.html</guid>
+        <link>http://localhost:4000/blog/setup/2021/02/04/hello-world.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/setup/2021/02/04/hello-world.html</guid>
         
         
         <category>Setup</category>
