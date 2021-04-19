@@ -290,11 +290,13 @@ Navbar styling thanks to http://work.smarchal.com/twbscolor
 }
 
 #projects {
-  background: -webkit-linear-gradient(#2e3a37, #436059);
-  background: -moz-linear-gradient(#2e3a37, #436059);
-  background: -o-linear-gradient(#2e3a37, #436059);
-  background: linear-gradient(#2e3a37, #436059);
-  background-color: ##436059;
+/*
+  background: -webkit-linear-gradient(#264653, #2a9d8f);
+  background: -moz-linear-gradient(#264653, #2a9d8f);
+  background: -o-linear-gradient(#264653, #2a9d8f);
+  background: linear-gradient(#264653, #2a9d8f);
+*/
+  background-color: #264653;
 }
 
 #aboutme {
