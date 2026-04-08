@@ -359,8 +359,8 @@ section {
 }
 
 .hero-photo {
-  width: 220px;
-  height: 220px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
@@ -816,8 +816,8 @@ footer {
   }
 
   .hero-photo {
-    width: 240px;
-    height: 240px;
+    width: 280px;
+    height: 280px;
   }
 
   .projects-grid {
@@ -840,8 +840,8 @@ footer {
    ============================================================ */
 @media (min-width: 1024px) {
   .hero-photo {
-    width: 260px;
-    height: 260px;
+    width: 300px;
+    height: 300px;
   }
 
   .projects-grid {
@@ -901,8 +901,12 @@ footer {
     order: -1;
   }
   .hero-photo {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-text {
+    padding-left: 8px;
   }
 
   .timeline-header {
